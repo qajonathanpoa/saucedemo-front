@@ -22,7 +22,7 @@ npm install
 *  2- Em seguida digite o comando:
 ```
 npm init -y
-```
+```s
 * 3- Por fim para instalação do cypress no projeto, digite o comando abaixo para instalar a última versão do cypress ou @numerodaversao desejada:
 
 ```
