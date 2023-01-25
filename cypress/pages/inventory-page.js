@@ -1,15 +1,16 @@
 /// <reference types="Cypress"/>
 
+
 import InventoryElements from "../support/elements/InventoryElements";
 const url = Cypress.config("baseUrl")
-const inventoryElements = new InventoryElements
+const inventoryElements = new InventoryElements()
 
 class InventoryPage {
     //Acessar pagina inventory
     acessarInventory() {
 
         cy.visit({
-            url: url + "inventory-item.html",
+            url: url + "inventory.html",
             method: 'GET',
             failOnStatusCode: false
         })
@@ -38,7 +39,7 @@ class InventoryPage {
     }
     acessoInventoryPageAposLogout(resultado) {
         cy.visit({
-            url: url + "inventory-item.html",
+            url: url + "inventory.html",
             method: 'GET',
             failOnStatusCode: false
 
@@ -47,42 +48,8 @@ class InventoryPage {
             .should("contain", resultado)
 
     }
-    clicarCarrinho() {
-        cy.get(inventoryElements.linkCarrinho()).click()
-
-    }
-    retornarQuantidadeItensCarrinho() {
-        let quantCarrinho = cy.get(inventoryElements.lblCarrinho())
-        console.log(quantCarrinho);
-        if (quantCarrinho == 0) {
-            
-            quantCarrinho.should("not.exist")
-           
-            
-        }
-        else if(quantCarrinho >= 0) {
-            
-            quantCarrinho.should("have.value", 1)
-            
-        }
-    }
-    adicionarItensCarrinho(produto) {
-
-        let listaProdutos = produto
-
-        switch (listaProdutos) {
-            case "Sauce Labs Backpack":
-                cy.get(inventoryElements.btnCartMochila(produto)).click()
-                break;
-            case "Sauce Labs Bike Light":
-                cy.get(inventoryElements.btnCartSauceBike(produto)).click()
-                break;
-
-            default:
-                console.log("Desculpe, estamos sem nenhum produto selecionado " + listaProdutos + ".");
-                break;
-        }
-    }
+    
+    
 }
 
 

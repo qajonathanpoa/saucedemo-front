@@ -37,20 +37,7 @@ Then(/^tento acessar a página de produtos apos efetuar logout (.*)$/, (resultad
 });
 
 
-When(/^eu clico sobre o carrinho vazio$/, () => {
-	inventoryPage.clicarCarrinho();
-});
 
-
-
-When(/^seleciono os produtos para o meu carrinho (.*)$/, (produto) => {
-	inventoryPage.adicionarItensCarrinho(produto)
-});
-
-
-When(/^deve exibir a página com a quantidade de itens do carrinho$/, () => {
-	inventoryPage.retornarQuantidadeItensCarrinho();
-});
 
 
 

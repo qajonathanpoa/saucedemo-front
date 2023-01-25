@@ -27,6 +27,7 @@ module.exports = defineConfig({
     retries: { openMode: 2 },
     baseUrl:'https://www.saucedemo.com/',
     chromeWebSecurity: false,
+    experimentalSessionAndOrigin: true
     
     
 

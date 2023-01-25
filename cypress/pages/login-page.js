@@ -5,13 +5,10 @@ const url = Cypress.config("baseUrl")
 
 class LoginPage {
 
-
-    //Acessar site que será testado
-    acessarSite() {
-        cy.visit(url)
-    }
    
-   
+   acessarSite(){
+    cy.sessionLogin();
+   }
     //Digitar campo Username
     preencherUserName(username) {
         if (username) {

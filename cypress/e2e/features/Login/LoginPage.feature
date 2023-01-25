@@ -44,7 +44,7 @@ Funcionalidade: Feature login
             | password | username | resultado           |
             | {alt}    | {alt}    | You can only access |
 
-            Esquema do Cenario: Deve exibir mensagem ao acessar página de produtos sem estar autenticado
+    Esquema do Cenario: Deve exibir mensagem ao acessar página de produtos sem estar autenticado
 
         Dado que acesso a pagina de produtos da saucedemo
         Entao observo a mensagem <resultado>
@@ -52,3 +52,16 @@ Funcionalidade: Feature login
         Exemplos:
             | password | username | resultado           |
             | {alt}    | {alt}    | You can only access |
+
+    Esquema do Cenario: Deve exibir a página de login ao selecionar a opção de logout
+
+        Dado que acesso a home saucedemo
+            E informo o usuário <username>
+            E informo a senha <password>
+        Quando eu clico sobre o botao login
+            E eu clico sobre o botao logout
+        Entao vejo a pagina de login <resultado>
+
+        Exemplos:
+            | password     | username      | resultado               |
+            | secret_sauce | standard_user | Accepted usernames are: |
