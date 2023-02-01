@@ -44,8 +44,7 @@ class InventoryPage {
             failOnStatusCode: false
 
         })
-        cy.get(inventoryElements.lblInventory(resultado))
-            .should("contain", resultado)
+        
 
     }
     

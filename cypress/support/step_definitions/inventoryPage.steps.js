@@ -33,7 +33,8 @@ When(/^vejo a pagina de login (.*)$/, (resultado) => {
 
 
 Then(/^tento acessar a página de produtos apos efetuar logout (.*)$/, (resultado) => {
-	inventoryPage.acessoInventoryPageAposLogout(resultado);
+	inventoryPage.acessoInventoryPageAposLogout();
+    inventoryPage.validarMensagemInventory(resultado)
 });
 
 

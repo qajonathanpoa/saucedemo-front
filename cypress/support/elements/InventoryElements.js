@@ -1,5 +1,5 @@
 class InventoryElements {
-    lblInventory = () => { return "[data-test='error']" }
+    lblInventory = () => { return "h3[data-test='error']" }
     titleProducts = () => { return "span[class='title']" }
     listaProductsInventory = () => { return "div[class='inventory_item']" }
     hamburgerLogout = () => { return "#react-burger-menu-btn" }

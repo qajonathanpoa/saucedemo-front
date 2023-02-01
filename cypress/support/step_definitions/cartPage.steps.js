@@ -13,14 +13,14 @@ When(/^eu clico sobre o carrinho$/, () => {
 
 
 
-When(/^vou escolher quais produtos vou remover (.*)$/, (quant_a_remover) => {
+When(/^vou escolher quais produtos remover (.*)$/, (quant_a_remover) => {
 	cartPage.removerItensCarrinho(quant_a_remover);
 });
 
 
 
-When(/^vejo a grid de produtos na mesma quantidade dos produtos selecionados (.*)$/, (quant_produtos) => {
-	cartPage.retornaQuantProdutosGridCart(quant_produtos)
+When(/^vejo a grid de produtos na mesma quantidade do carrinho (.*)$/, (carrinho_atualizado) => {
+	cartPage.retornaQuantProdutosGridCart(carrinho_atualizado)
 });
 
 
@@ -30,3 +30,19 @@ When(/^vejo a grid de produtos na mesma quantidade dos produtos selecionados (.*
 When(/^deve exibir a pagina com o valor de carrinho vazio$/, () => {
 	cartPage.retornaCarrinhoVazio();
 });
+
+
+When(/^deve exibir a página com a quantidade de itens no carrinho (.*)$/, (carrinho_atualizado) => {
+	cartPage.retornaCarrinhoAtualizado(carrinho_atualizado)
+});
+
+
+When(/^clico sobre o botao de checkout$/, () => {
+	cartPage.clicarBotaoCheckout();
+});
+
+
+When(/^sou direcionado para a pagina de checkout de produtos (.*)$/, (resultado_checkouto) => {
+	cartPage.validarTitlePaginadeCheckout(resultado_checkouto);
+});
+

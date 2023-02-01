@@ -7,7 +7,7 @@ class LoginPage {
 
    
    acessarSite(){
-    cy.sessionLogin();
+    cy.visit(url);
    }
     //Digitar campo Username
     preencherUserName(username) {

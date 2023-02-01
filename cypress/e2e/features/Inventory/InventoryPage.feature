@@ -5,7 +5,7 @@ Funcionalidade: Feature inventory
     Sendo um usuario possui conta criada
     Quero fazer fazer login na saucedemo
     Para que eu possa realizar minhas compras
-
+    
     Esquema do Cenario: Deve logar com sucesso
 
         Dado que acesso a home saucedemo
@@ -30,7 +30,7 @@ Funcionalidade: Feature inventory
 
         Exemplos:
             | password     | username      | resultado                                  |
-            | secret_sauce | standard_user | You can only access '/inventory-item.html' |
+            | secret_sauce | standard_user | Epic sadface: You can only access '/inventory.html' when you are logged in. |
 
 
 
